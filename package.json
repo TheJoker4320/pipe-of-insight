@@ -27,5 +27,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-preset-es2016-node5": "^1.1.2",
+    "babel-preset-react": "^6.24.1",
+    "electron-is-dev": "^1.1.0",
+    "electron-prebuilt-compile": "^4.0.0"
   }
 }
