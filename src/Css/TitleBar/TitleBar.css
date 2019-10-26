@@ -1,0 +1,8 @@
+.title-bar {
+    background-color: rgb(32,34,37);
+    /*background-image: linear-gradient(to right,rgb(32,34, 37), rgb(22, 46, 82), 45deg);/*rgb(32,34, 37);*/
+    color: #ccc;
+    width: 100%;
+    height: 24px;
+    -webkit-app-region: drag;
+}

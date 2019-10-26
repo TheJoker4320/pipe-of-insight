@@ -1,0 +1,20 @@
+.parent {
+    list-style: none;
+    margin: 0;
+    padding-right: 3px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.parent  li {
+    display: block;
+    float: left;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-right: 4px;
+    padding-left: 3px;
+   
+}
+
+

@@ -1,0 +1,16 @@
+
+.container{
+    position: absolute;
+    right: 0px;
+    background-color: transparent;
+    color: #dddddd;
+    height: 22px;
+    -webkit-app-region: no-drag;
+}
+ul{
+    list-style-type: none;
+    right: 1px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+}
