@@ -3,7 +3,11 @@ import TitleBar from './Systems/TitleBar.jsx';
 import DevBar from './Systems/DevBar.jsx';
 import JokerHat from './static/assets/logo/JokerHat.svg';
 import './App.css';
+import page_model from './Models/pageModel';
+import {StoreProvider, createStore} from 'easy-peasy';
 
+
+const store = createStore(page_model);
 
 const Appstyles = {
   logo:{
@@ -23,23 +27,19 @@ const Appstyles = {
 
 function App() {
   return (
-    <div className="App">
-      <TitleBar style= {{
+    <StoreProvider store={store}>
+      <div className="App">
+        <TitleBar style= {{
           background: '#232323',
         }}
         logo= {JokerHat}
         appName= {Appstyles.name.text}
         design= {Appstyles}
         />
-          <h1 style= {{
-            color: '#e83131',
-            paddingLeft: '230px',
-            fontSize: '50px',
-            fontWeight: 'bold',
-            paddingTop: '250px'
-          }}>My Cool App</h1>
+          {store.getState().current}
       <DevBar/>
     </div>
+    </StoreProvider>
   );
 }
 
