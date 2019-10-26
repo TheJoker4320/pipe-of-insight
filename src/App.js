@@ -1,5 +1,6 @@
 import React from 'react';
-import TitleBar from './Systems/TitleBar.jsx'
+import TitleBar from './Systems/TitleBar.jsx';
+import DevBar from './Systems/DevBar.jsx';
 import JokerHat from './static/assets/logo/JokerHat.svg';
 import './App.css';
 
@@ -37,7 +38,7 @@ function App() {
             fontWeight: 'bold',
             paddingTop: '250px'
           }}>My Cool App</h1>
-        
+      <DevBar/>
     </div>
   );
 }
