@@ -3,5 +3,6 @@ import StartPage from '../Pages/SartPage.jsx';
 
 export default {
     name: "Pipe",
-    current: <StartPage/>
+    current: <StartPage/>,
+    defaultSettings: "https://raw.githubusercontent.com/TheJoker4320/vision-framework/develop/examples/example.json"
 }
