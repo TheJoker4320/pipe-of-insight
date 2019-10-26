@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import  '../../Css/TitleBar/Button.css';
+import  '../../static/css/TitleBar/Button.css';
 
 class Button extends Component {
   constructor(props) {

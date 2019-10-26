@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../Css/TitleBar/TitleBar.css';
+import '../static/css/TitleBar/TitleBar.css';
 import Buttons from '../Subsystems/TitleBar/Buttons';
 import Title from '../Components/TitleBar/Title.jsx';
 

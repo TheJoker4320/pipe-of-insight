@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
-import '../../Css/TitleBar/Buttons.css';
-import '../../Css/TitleBar/Button.css';
+import '../../static/css/TitleBar/Buttons.css';
+import '../../static/css/TitleBar/Button.css';
 import Button from '../../Components/TitleBar/Button.jsx';
 
 const {remote} = window.require("electron");
