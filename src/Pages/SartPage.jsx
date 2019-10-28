@@ -11,9 +11,10 @@ class StartPage extends Component {
         return(
             <div>
                 <div className="back-img"></div>
+                <div className="back-img-white"></div>
                 <div className="start-page">
                     <WelcomeCard/>
-                    <img className= "crad-img" src={card} alt=""/>
+                    <img className= "crad-img" src={card} alt=""/>                         
                 </div>
             </div>            
         );

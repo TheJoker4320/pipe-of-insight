@@ -7,7 +7,14 @@
     position: absolute;
     z-index: 0;
 }
-
+.back-img-white{
+    clip-path: polygon(0 0, 49% 0, 100% 100%, 0% 100%);
+    background-image: linear-gradient(to right ,#bdbdbd,#d3d2d2, #ffffff);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
 .start-page{
     display: grid;
     position: absolute;

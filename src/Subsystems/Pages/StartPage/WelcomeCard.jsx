@@ -11,7 +11,17 @@ class WelcomeCard extends Component {
                 <p className= "content">This is the offcial app for the FRC team 4320 The Joker
                     for their vision framework, enjoy using it.
                 </p>
-                <p className= "writter">- The Joker 4320</p>
+                <p className= "writter"><b>- The Joker 4320</b></p>
+                <ul className= "create-pipes">
+                    <li><button style={{
+                        backgroundImage: "linear-gradient(to right, #0a0a0a, #330a0a)",
+                        color: "#dfdfdf"
+                    }}>New Pipeline</button></li>
+                    <li><button style={{
+                        backgroundImage: "linear-gradient(to left, #0a0a0a, #dfdfdf)",
+                        color: "#0a0808"
+                    }}>Use Pipeline</button></li>
+                </ul>  
             </div>
         )
     }

@@ -1,24 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+.title,.content, .writter{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
 .welcome-card{
     color: aliceblue;
     margin-left: 10%;
     margin-right: 5%;
     height: 75%;
-    background-color: #222222e0;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
 }
 
 .title{
     padding-top: 20px;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
+    font-size: 50px;
 }
 .content{
     padding: 20px;
+    font-size: 22px;
 }
 
 .writter{
     padding-left: 45px;
-    color: #e83131;
+    color: #111111;/*#e83131;*/
     font-weight: 700;
+    font-size: 20px;
+}
+
+.create-pipes{
+    list-style-type: none;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    padding: 20px 20px 20px 0px;
+    margin: 0;
+}
+.create-pipes > li{
+    display: block;
+    float: left;
+    margin-left: 10px;
+    width: 42%;
+}
+.create-pipes >li > button{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    /*font-weight: bold;*/
+    position: relative;
+    -webkit-box-pack: center;
+    cursor: pointer;  
+    pointer-events: auto;
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+    align-content: center;
+    border-radius: 4px;
+    width: 100%;
+    height: 48px;
+
 }
