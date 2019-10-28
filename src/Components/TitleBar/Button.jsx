@@ -6,8 +6,8 @@ class Button extends Component {
   constructor(props) {
     super(props);
     //importentargs
-    this.color = typeof this.props.color == undefined ? "#fff": this.props.color;
-    this.bg = typeof this.props.bg == undefined ? "#444": this.props.bg;
+    this.color = typeof this.props.color === undefined ? "#fff": this.props.color;
+    this.bg = typeof this.props.bg === undefined ? "#444": this.props.bg;
     this.state = {
       hovering: false,
       focused: false
@@ -44,7 +44,6 @@ class Button extends Component {
     let color = this.context.windowControlsColor;
     if (hovering) {
       opacity = 1;
-      //this.context.windowCloseBackground  this.context.windowCloseHover
       color = this.props.close ? "#fff" : color;
       backgroundColor = close ? "rgb(240,71,71)" : this.context.windowDefaultBackground;
     } else if (focused) {

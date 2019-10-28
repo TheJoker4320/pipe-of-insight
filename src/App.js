@@ -5,6 +5,7 @@ import JokerHat from './static/assets/logo/JokerHat.svg';
 import './App.css';
 import page_model from './Models/pageModel';
 import {StoreProvider, createStore} from 'easy-peasy';
+import MainPage from './Pages/MainPage.jsx';
 
 
 const store = createStore(page_model);
@@ -13,7 +14,7 @@ const Appstyles = {
   logo:{
     width: '13px',
     height: '13px',
-    color: '#e83131',
+    color: '#b31616',
     padding: '3px'
   },
   name: {
@@ -36,7 +37,8 @@ function App() {
         appName= {Appstyles.name.text}
         design= {Appstyles}
         />
-          {store.getState().current}
+          
+          <MainPage defaulturl= {store.getState().defaultSettings}/>
       <DevBar/>
     </div>
     </StoreProvider>

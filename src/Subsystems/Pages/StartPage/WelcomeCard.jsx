@@ -1,10 +1,15 @@
-import React, {Component } from 'react';
+import React, {Component} from 'react';
 import '../../../static/css/Pages/StartPage/WelcomeCard.css';
 
 
 class WelcomeCard extends Component {
 
+    continue = e =>{
+        e.preventDefault();
+        this.props.nextStep();
+    }
     render(){
+
         return(
             <div className="welcome-card">
                 <h1 className= "title">Welcome!</h1>
@@ -13,14 +18,9 @@ class WelcomeCard extends Component {
                 </p>
                 <p className= "writter"><b>- The Joker 4320</b></p>
                 <ul className= "create-pipes">
-                    <li><button style={{
-                        backgroundImage: "linear-gradient(to right, #0a0a0a, #330a0a)",
-                        color: "#dfdfdf"
-                    }}>New Pipeline</button></li>
-                    <li><button style={{
-                        backgroundImage: "linear-gradient(to left, #0a0a0a, #dfdfdf)",
-                        color: "#0a0808"
-                    }}>Use Pipeline</button></li>
+
+                    <li><button className="pipes-btns" id= "new-pipe" onClick= {this.continue}>New Pipeline</button></li>
+                    <li><button className="pipes-btns" id= "use-pipe" >Use Pipeline</button></li>
                 </ul>  
             </div>
         )

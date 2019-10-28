@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import '../static/css/Pages/StartPage/StartPage.css';
 import card from '../static/assets/JokerCard.png';
-import WelcomeCard from '../Subsystems/Pages/StartPage/WelcomeCard';
 
 
 
-class StartPage extends Component {
+class VisionPage extends Component {
      
     render(){
         return(
@@ -13,8 +12,6 @@ class StartPage extends Component {
                 <div className="back-img"></div>
                 <div className="back-img-white"></div>
                 <div className="start-page">
-                    <WelcomeCard
-                    nextStep= {this.props.nextStep}/>
                     <img className= "crad-img" src={card} alt=""/>                         
                 </div>
             </div>            
@@ -23,4 +20,4 @@ class StartPage extends Component {
 }
 
 
-export default StartPage;
+export default VisionPage;
