@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../static/css/DevBar/AppInfo.css';
+import '../../css/DevBar/AppInfo.css';
 
 class AppInfo extends Component {
 

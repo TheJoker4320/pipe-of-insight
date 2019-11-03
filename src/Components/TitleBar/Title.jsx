@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../static/css/TitleBar/Title.css';
+import '../../css/TitleBar/Title.css';
 
 class Title extends Component {
 

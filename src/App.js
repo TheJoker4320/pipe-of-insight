@@ -1,14 +1,21 @@
 import React from 'react';
 import TitleBar from './Systems/TitleBar.jsx';
 import DevBar from './Systems/DevBar.jsx';
-import JokerHat from './static/assets/logo/JokerHat.svg';
+
 import './App.css';
-import page_model from './Models/pageModel';
+import page_model from './Models/page.model';
+
 import {StoreProvider, createStore} from 'easy-peasy';
 import MainPage from './Pages/MainPage.jsx';
 
+const {remote} = window.require('electron');
+const path = require('path');
+var basepath = remote.app.getAppPath();
+
+const JokerHat = `${basepath}\\static\\assets\\logo\\JokerHat.svg`;
 
 const store = createStore(page_model);
+
 
 const Appstyles = {
   logo:{
@@ -37,8 +44,7 @@ function App() {
         appName= {Appstyles.name.text}
         design= {Appstyles}
         />
-          
-          <MainPage defaulturl= {store.getState().defaultSettings}/>
+        <MainPage defaulturl= {store.getState().defaultSettings}/>    
       <DevBar/>
     </div>
     </StoreProvider>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../static/css/DevBar/DevBar.css';
+import '../css/DevBar/DevBar.css';
 import InfoApp from '../Subsystems/DevBar/AppInfo.jsx';
 
 class DevBar extends Component {

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import '../static/css/Pages/StartPage/StartPage.css';
-import card from '../static/assets/JokerCard.png';
-
+import '../css/Pages/StartPage/StartPage.css';
+import SideBar from '../Systems/SideBar';
 
 
 class VisionPage extends Component {
@@ -11,10 +10,7 @@ class VisionPage extends Component {
             <div>
                 <div className="back-img"></div>
                 <div className="back-img-white"></div>
-                <div className="start-page">
-                    <img className= "crad-img" src={card} alt=""/>                         
-                </div>
-            </div>            
+            </div>        
         );
     }
 }

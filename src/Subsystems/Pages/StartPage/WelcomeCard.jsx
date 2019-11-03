@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../../static/css/Pages/StartPage/WelcomeCard.css';
+import '../../../css/Pages/StartPage/WelcomeCard.css';
 
 
 class WelcomeCard extends Component {
