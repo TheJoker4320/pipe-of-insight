@@ -9,7 +9,7 @@ function createWindow() {
         width: 800, minWidth: 800,
         height: 600, minHeight: 600,
         show: false,
-        //frame: process.platform !== 'darwin' ? false : 'hidden',
+        frame: process.platform !== 'darwin' ? false : 'hidden',
         webPreferences: {
           nodeIntegration: true, // <--- flag
           nodeIntegrationInWorker: true // <---  for web workers

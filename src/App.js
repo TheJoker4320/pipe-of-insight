@@ -7,12 +7,13 @@ import page_model from './Models/page.model';
 
 import {StoreProvider, createStore} from 'easy-peasy';
 import MainPage from './Pages/MainPage.jsx';
+import JokerHat from './static/assets/logo/JokerHat.svg';
 
-const {remote} = window.require('electron');
-const path = require('path');
+/*const {remote} = window.require('electron');
+
 var basepath = remote.app.getAppPath();
 
-const JokerHat = `${basepath}\\static\\assets\\logo\\JokerHat.svg`;
+const JokerHat = `${basepath}\\static\\assets\\logo\\JokerHat.svg`;*/
 
 const store = createStore(page_model);
 
