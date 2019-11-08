@@ -12,8 +12,12 @@
     color: #dddddd;
     overflow: hidden;
     text-align: center;
+    position: relative;
+    top: 3px;
     font-size: 13px;
     font-weight: 400;
     width: auto;
+    align-items: center;
+    height: 24px;
 }
 

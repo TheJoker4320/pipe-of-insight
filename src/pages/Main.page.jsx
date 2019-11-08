@@ -65,6 +65,7 @@ export default class Main extends Component {
             // Create the new diffault file
             this.createFile();
 
+            this.props.setTop(`${this.state.file_name}.json - Pipe Of Insight`);
             // Move on to next page
             this.nextStep();
         }}
