@@ -13,6 +13,7 @@ class MainPage extends Component{
             step: 0,
             defaultSettings: [],
             fileName: 'default',
+            fileDir: '',
             isDefault: true
         }
         this.getDefault()
@@ -49,6 +50,7 @@ class MainPage extends Component{
         else
             console.log('Write operation complete.');
         });
+        this.setState({fileDir:'./pipelines/'})
       }
 
     UpdateFileName = (filename) => {
