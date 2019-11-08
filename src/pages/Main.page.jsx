@@ -14,7 +14,7 @@ export default class Main extends Component {
             current: <div></div>,
             file_dir: '',
             file_name: 'default',
-            obj: null,
+            obj: {},
         }
         this.setDifault();
     }
@@ -36,6 +36,7 @@ export default class Main extends Component {
               console.log("There was an error fetching the data: " + e)
             }
     }
+
     createFile = () =>{
         var { obj } = this.state;
 
@@ -55,12 +56,39 @@ export default class Main extends Component {
         // read the file
     }
 
+    updateObj = (state,props) => {
+        return {...state, obj: this.our_obj};
+    }
     componentDidMount() {
+        const nxt = <Start
+        newPipeCmd = {() =>{
+            // Create the new diffault file
+            this.createFile();
+
+            // Move on to next page
+            this.nextStep();
+        }}
+        usePipeCmd = {(dir) =>{
+            console.log(dir);
+            // Save as JS objact
+            var our_obj = JSON.parse(fs.readFileSync(dir, 'utf8'));
+            this.state.obj = our_obj; // Don't remove it just works
+            this.setState({obj: our_obj});
+
+            var filename = dir.replace(/^.*[\\\/]/, '')
+
+            this.state.file_name = filename; // Don't remove it just works
+            this.setState({file_name: filename});
+            
+            this.props.setTop(`${filename} - Pipe Of Insight`);
+
+            this.setFile(dir);
+            // Move on to next page
+            this.nextStep();
+        }}
+    />
         this.setState({
-            current: <Start
-                        nextStep = {this.nextStep}
-                        setFile= {this.setFile}
-                    />
+            current: nxt
         });
     }
 

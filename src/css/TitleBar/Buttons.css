@@ -5,6 +5,7 @@
     color: #dddddd;
     height: 24px;
     -webkit-app-region: no-drag;
+    z-index: 10;
 }
 ul{
     list-style-type: none;

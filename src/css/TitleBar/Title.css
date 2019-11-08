@@ -1,4 +1,6 @@
 .parent {
+    position: absolute;
+    left: 0px;
     list-style: none;
     margin: 0;
     padding-right: 3px;
@@ -12,8 +14,6 @@
     align-items: center;
     margin: 0;
     padding: 0;
-    /*padding-right: 4px;
-    padding-left: 3px;*/
    
 }
 

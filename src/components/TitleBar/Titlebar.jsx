@@ -37,6 +37,9 @@ export default function Titlebar(props) {
                   color='#333333'/>
                 </div>   
               </Title>
+
+              <p className= "file-name">{props.fileName}</p>
+
             </div>
           );
         }

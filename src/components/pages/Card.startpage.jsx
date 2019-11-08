@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../../css/Pages/StartPage/Card.startpage.css';
 
-export default function Card({nextStep ,setFile}) {
+const {dialog } = window.require('electron').remote;
+
+export default class Card extends Component {
+
+    constructor(props){
+        super(props);
+        this.newPipeCmd = this.props.newPipeCmd;
+        this.usePipeCmd = this.props.usePipeCmd;
+    }
+
+    render(){
     return (
         <div className="welcome-card">
                 <h1 className= "title">Welcome!</h1>
@@ -14,22 +24,30 @@ export default function Card({nextStep ,setFile}) {
                     <li>
                         <button className="pipes-btns" id= "new-pipe" onClick= {(e) => {
                             e.preventDefault();
-                            nextStep();
+                            this.newPipeCmd();
                         }}>
                             New Pipeline
                         </button>
                     </li>
                     <li>
-                        <input type="file" className="pipes-input" id= "file" accept= ".json"
-                        onChange= {(e) => {
-                            e.preventDefault();
-                            setFile(e.target.value);
-                        }}/>
-                        <label 
-                        htmlFor="file"
-                        className="pipes-label" id="use-pipe"> Use Pipeline</label>
+                        <button type="file" className="pipes-btns" id= "use-pipe"
+                        onClick= {(e) => {
+                            var dir;
+                            dir= dialog.showOpenDialog({ 
+                                properties: ['openFile', 'multiSelections'],
+                                filters: [{ name: 'Custom File Type', extensions: ['json'] }],
+                                defaultPath : `${__dirname}/pipelines/.json`
+                            })
+                            if(dir !== undefined)
+                                this.usePipeCmd(dir[0]);
+
+                        }}>
+                            Use Pipeline
+                        </button>
                     </li>
                 </ul>  
         </div>
-    )
+    );
 }
+}
+

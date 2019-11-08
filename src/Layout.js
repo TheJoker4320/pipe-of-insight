@@ -31,6 +31,7 @@ export default function Layout(props) {
                     logo= {JokerHat}
                     appName= {Appstyles.name.text}
                     design= {Appstyles}
+                    fileName= {props.fileName}
             />
                 {/* Page placehoder*/}
                 {props.children}
