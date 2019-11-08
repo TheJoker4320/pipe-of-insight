@@ -1,8 +1,7 @@
 import React from 'react';
 import '../../css/Pages/StartPage/Card.startpage.css';
-import { saveSnapshotFile } from 'jest-snapshot/build/utils';
 
-export default function Card({nextPage, setFile}) {
+export default function Card({nextStep ,setFile}) {
     return (
         <div className="welcome-card">
                 <h1 className= "title">Welcome!</h1>
@@ -15,7 +14,7 @@ export default function Card({nextPage, setFile}) {
                     <li>
                         <button className="pipes-btns" id= "new-pipe" onClick= {(e) => {
                             e.preventDefault();
-                            nextPage();
+                            nextStep();
                         }}>
                             New Pipeline
                         </button>

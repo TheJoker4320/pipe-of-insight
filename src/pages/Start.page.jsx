@@ -11,15 +11,13 @@ import card from '../static/assets/JokerCard.png';
 var basepath = remote.app.getAppPath();
 const card = `${basepath}\\static\\assets\\JokerCard.png`;*/
 
-export default function Start({nextPage, setFile}) {
+export default function Start({nextStep, setFile}) {
     return (
         <div className="start-page">
             <Card 
-            nextPage = {nextPage}
+            nextStep = {nextStep}
             setFile = {setFile}
-            >
-                
-            </Card>
+            />
             <img 
             className= "crad-img" 
             src={card} alt="card"
