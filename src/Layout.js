@@ -1,7 +1,7 @@
 import React from 'react';
 import TitleBar from './components/TitleBar/Titlebar';
+import DevBar from './components/DevBar/DevBar';
 import JokerHat from './static/assets/logo/JokerHat.svg';
-
 
 
 const Appstyles = {
@@ -32,7 +32,7 @@ export default function Layout(props) {
         appName= {Appstyles.name.text}
         design= {Appstyles}/>
             {props.children}
-            
+        <DevBar/>
         </div>
         
     )

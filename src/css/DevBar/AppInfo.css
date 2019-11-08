@@ -13,3 +13,10 @@ ul{
     height: 100%;
     margin-right: 5px;
 }
+.data h5 ,h4{
+    font-weight: 500;
+}
+
+#move{
+    margin-left: 5px;
+}
