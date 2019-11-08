@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+.title,.content, .writter{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.welcome-card{
+    color: aliceblue;
+    margin-left: 10%;
+    margin-right: 5%;
+    height: 75%;
+}
+
+.title{
+    padding-top: 20px;
+    padding: 20px 20px 20px 0px;
+    font-size: 50px;
+}
+.content{
+    padding: 20px;
+    font-size: 22px;
+}
+
+.writter{
+    padding-left: 45px;
+    color: #111111;/*#e83131;*/
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.create-pipes{
+    list-style-type: none;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    padding: 20px 20px 20px 0px;
+    margin: 0;
+}
+.create-pipes > li{
+    display: block;
+    float: left;
+    margin-left: 10px;
+    width: 42%;
+}
+.pipes-btns{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    background-size: 200%;
+	font-size: 0.85rem;
+    outline: none;;
+    position: relative;
+    -webkit-box-pack: center;
+    cursor: pointer;  
+    pointer-events: auto;
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+    align-content: center;
+    border-radius: 4px;
+    transition: .5s;
+    width: 100%;
+    height: 48px;
+
+}
+.pipes-btns:hover{
+    color: #dedede;
+    background-position: right;
+}
+#use-pipe{
+    background-image: linear-gradient(to left, #0a0a0a, #5f0c0c);
+    color: #dfdfdf;
+}
+#new-pipe{
+    background-image: linear-gradient(to left, #0a0a0a, #dfdfdf);
+}
