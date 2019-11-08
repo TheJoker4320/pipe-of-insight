@@ -2,6 +2,7 @@
   "name": "pos",
   "version": "0.1.0",
   "private": true,
+  "main": "./public/electron.js",
   "dependencies": {
     "babel-preset-es2016-node5": "^1.1.2",
     "babel-preset-react": "^6.24.1",
@@ -15,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron": "yarn electron ."
+    "electron": "electron ."
   },
   "eslintConfig": {
     "extends": "react-app"
