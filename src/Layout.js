@@ -26,13 +26,15 @@ export default function Layout(props) {
     return (
         <div className={props.className}>
             <TitleBar style= {{
-          background: '#232323',
-        }}
-        logo= {JokerHat}
-        appName= {Appstyles.name.text}
-        design= {Appstyles}/>
-            {props.children}
-        <DevBar/>
+                    background: '#232323',
+                    }}
+                    logo= {JokerHat}
+                    appName= {Appstyles.name.text}
+                    design= {Appstyles}
+            />
+                {/* Page placehoder*/}
+                {props.children}
+            <DevBar/>
         </div>
         
     )
