@@ -39,7 +39,9 @@
     background-color: #444;
     color: #fff;
     transition: background-color 0.2s ease;
-    opacity: 0.5;
+}
+.btn:focus{
+    outline: none;
 }
 .camera-settings{
     position: absolute;

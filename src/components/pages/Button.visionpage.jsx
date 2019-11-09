@@ -12,6 +12,7 @@ class Button extends Component {
         hovering: false,
         pressed: false
       };
+      
     }
     toggleHover = () => {
       this.setState({
@@ -46,9 +47,9 @@ class Button extends Component {
       let backgroundColor = 'transparent';
       let transition = 'fill 0.05s ease';
       if (hovering) {
-        this.fill= 'rgb(255, 255, 255)';
+        this.fill= '#e8e8e8';
       } else if (this.props.name === this.props.current) {
-        this.fill= 'rgb(255, 255, 255)';
+        this.fill= '#e8e8e8';
         transition = 'none';
       }
       let fill = this.fill;
