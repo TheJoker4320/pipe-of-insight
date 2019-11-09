@@ -95,7 +95,10 @@ export default class Main extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{
+                background: 'transparent',
+                heihgt: '100%'
+            }}>
                 <Background/>
                 {this.state.current}
             </div>

@@ -1,0 +1,47 @@
+.task-bar{
+    background-color: #222222;
+    width: 50px;
+    height: 100%;
+    color: #dddddd;
+    
+}
+.task-bar > ul {
+    width: 50px;
+    list-style-type: none;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    color: #dddddd;
+}
+#down{
+    width: 20px;
+    fill: rgba(211, 211, 211, 0.527) ;
+}
+#img-btn{
+    width: 24px;
+    /*margin: 5px;*/
+}
+
+
+.btn{
+    display: block;
+    position: relative;
+    -webkit-box-pack: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    pointer-events: auto;
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+    align-items: left;
+    border-radius: 0;
+    background-color: #444;
+    color: #fff;
+    transition: background-color 0.2s ease;
+    opacity: 0.5;
+}
+.camera-settings{
+    position: absolute;
+    bottom: 50px;
+}
