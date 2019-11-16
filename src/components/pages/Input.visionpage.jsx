@@ -15,10 +15,12 @@ export default function Input(props) {
     const [data, SetData] = useState(props.data);
     const SetAbove = props.setObj;
     const onClick = props.onClick;
+
+    var part = props.isInArr ?  <p style= {{paddingLeft: '5px', paddingRight: '5px'}}>,</p> : <div></div>;
     //addPassOn(SetAbove, data);
     return (
-        <div>
-            <h4>{props.name}</h4>
+        <div style ={{...props.style, width: '100%'}}>
+            <h4 style= {{...props.style, marginRight: '5px'}}>{props.name} :</h4>
             
             <input type= 'text' placeholder= {props.placeholder} value={data}
             onClick= {onclick} onChange= {(e) => {
@@ -27,19 +29,15 @@ export default function Input(props) {
                 SetData(e.target.value);
 
             }}
-            style= {{minWidth:'1px', margin: '0', padding: '0'}}
-            onKeyDown= {(e) => {
-                e.target.style.width = 0;
-                var newWidth = e.target.scrollWidth + 10;
-                    
-                if( e.target.scrollWidth >= e.target.clientWidth )
-                    newWidth += 10;
-                        
-                    e.target.style.width = newWidth + 'px';
-                //e.target.style.width = ((e.target.value.length + 1) * 8) + 'px';
+            style = {{
+                ...props.style, 
+                margin: '0',
+                padding: '0',
             }}
+            required
+            size = {data.toString().length === 0 ? '1' : data.toString().length}
             />
-        
+            {part}
         </div>
 
     )

@@ -25,50 +25,79 @@ export default class Form extends Component {
         this.setObj = this.setObj.bind(this);
     }
 
-    PrintElements(obj){
+    PrintElements(obj, isInArr= false){
         let show = null;
         const keys = Object.keys(obj);
         
 
-        this.marginLeft +=5;
         console.log(this.keys);
 
         show = keys.map((key) => {
             if(typeof obj[key] === undefined){
+                console.log('print')
                 this.marginLeft = 0;
                 return null;
             }
-            if(typeof obj[key] === "object"){
+            if(Array.isArray(obj[key])){
+
+                return(
+                    <div key= {++this.keys}>
+                        <p style= {{
+                        display:'inline-block',
+                        width: '100%'
+                    }}>[</p>
+                            {this.PrintElements(obj[key], isInArr= true)}
+                        
+                        <p style= {{
+                        display:'inline-block',
+                        width: '100%'
+                        }}>]<br/></p>
+                    </div>
+                )
+                
+            } else if(typeof obj[key] === "object"){
+                this.marginLeft += 5;
                 return (
             
-                    <div key= {++this.keys}>
-                        <h2 styles={{
-                            paddingLeft: this.marginLeft.toString()+'px',
+                    <div key= {++this.keys}
+                            style= {{display: 'inline-block'}}>
+                        <h3 style={{
                             background: "inherit",
                             color: "#ddd",
-                            float: 'left'
+                            float: 'left',
+                            display:'inline-block',
+                            width: '100%'
                             }}
                             key= {++this.keys}
                             >{key}
-                        </h2>
-                        {this.PrintElements(obj[key])}
+                        </h3>
+                        {this.PrintElements(obj[key], false)}
                     </div> 
                )
+
             } else if(typeof obj[key] === undefined){
+                console.log('end')
+                this.marginLeft = 0;
                 return <div></div>;
             } else{
+                
+                //this.marginLeft+=15;
 
                 return(
                     
-                    <Input name= {key} data= {obj[key]} styles={{
+                    <Input name= {key} data= {obj[key]} style={{
                         //paddingLeft: this.marginLeft.toString()+'px',
                         
                         background: "#232323",
                         color: "#ddd",
+                        display:'inline-block',
+                        float: 'left',
+                        paddingLeft: (this.marginLeft).toString()+'px',
                         
                     }}
+                    isInArr = {isInArr}
                     key= {++this.keys}
-                    setObj = {(e)=> {
+                    setObj = {(e) => {
                         e.preventDefault();
                         obj[key] = e.target.value;
                     }}
@@ -76,8 +105,8 @@ export default class Form extends Component {
                 )
             }
         }
-            
         )
+        this.marginLeft = 0;
         return show;
     }
     setObj(event){
@@ -85,7 +114,7 @@ export default class Form extends Component {
         this.setState({obj: {...this.state.obj, key: event.target.value} })
     }
     render() {
-        let show = this.PrintElements(this.state.obj);
+        let show = this.PrintElements(this.state.obj, false);
         return (
                 <div style= {styles}
                 key = {this.key}>
