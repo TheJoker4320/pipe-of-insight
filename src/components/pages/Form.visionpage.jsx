@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Input from './Input.visionpage';
+import Field from './Feild.visionpage';
 
 
 let styles= {
@@ -85,7 +85,7 @@ export default class Form extends Component {
 
                 return(
                     
-                    <Input name= {key} data= {obj[key]} style={{
+                    <Field name= {key} data= {obj[key]} style={{
                         //paddingLeft: this.marginLeft.toString()+'px',
                         
                         background: "#232323",
@@ -97,10 +97,10 @@ export default class Form extends Component {
                     }}
                     isInArr = {isInArr}
                     key= {++this.keys}
-                    setObj = {(e) => {
-                        e.preventDefault();
-                        obj[key] = e.target.value;
+                    setObj = {(value) => {
+                        obj[key] = value;
                     }}
+                    type = {typeof obj[key]}
                     />
                 )
             }
